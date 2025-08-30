@@ -71,7 +71,7 @@ form.addEventListener("submit", async (e) => {
 });
 async function postUser(userData) {
   try {
-    const res = await fetch("http://localhost:3000/users", {
+    const res = await fetch("https://coderspacee.onrender.com/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userData),
