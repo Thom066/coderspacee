@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/users";
+const API_URL = "https://coderspacee.onrender.com/users";
 const user = JSON.parse(localStorage.getItem("user"));
 const USER_ID = user ? user.user_id : null;
 const form = document.querySelector("form");
@@ -108,7 +108,7 @@ cancelBtn.addEventListener("click", () => {
 
 async function getUserData(email) {
   try {
-    const response = await fetch("http://localhost:3000/users", {
+    const response = await fetch("https://coderspacee.onrender.com/users", {
       method: "GET",
       headers: { "Content-Type": "application/json" }
     });

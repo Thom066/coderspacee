@@ -269,7 +269,7 @@ publishCode.addEventListener("click", (e) => {
 // 🔗 Enviar post al backend
 async function addPost(post) {
     try {
-        const res = await fetch("http://localhost:3000/post", {
+        const res = await fetch("https://coderspacee.onrender.com/post", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(post)
@@ -302,7 +302,7 @@ let firstLoad = true; // para controlar el loader inicial
 // función para traer todos los posts (una sola vez)
 async function fetchAllPosts() {
   if (allPosts.length > 0) return; // ya los trajimos
-  const res = await fetch("http://localhost:3000/post/postdata");
+  const res = await fetch("https://coderspacee.onrender.com/post/postdata");
   allPosts = await res.json();
 }
 
@@ -358,9 +358,9 @@ async function renderTopTrending() {
 }
 
 
-const API_LIKES_URL = "http://localhost:3000/likes";
-const API_COMMENTS_URL = "http://localhost:3000/commentary";
-const API_USERS_URL = "http://localhost:3000/users";
+const API_LIKES_URL = "https://coderspacee.onrender.com/likes";
+const API_COMMENTS_URL = "https://coderspacee.onrender.com/commentary";
+const API_USERS_URL = "https://coderspacee.onrender.com/users";
 const USER_ID = userData ? userData.user_id : null;
 // función para renderizar los siguientes 5 posts
 

@@ -35,8 +35,8 @@ darkToggle.textContent = root.classList.contains("dark") ? "☀" : "🌙";
 
 // ========== VARIABLES ==========
 const tbody = document.getElementById("tbody");
-const ADMIN_USER_URL = "http://localhost:3000/users/post_user";
-const USER_URL = "http://localhost:3000/users";
+const ADMIN_USER_URL = "https://coderspacee.onrender.com/users/post_user";
+const USER_URL = "https://coderspacee.onrender.com/users";
 let users = []; // array global
 
 // ========== RENDER TABLE ==========

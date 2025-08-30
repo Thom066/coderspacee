@@ -18,7 +18,7 @@ function hideLoader() {
   const loader = document.getElementById('profileLoader');
   if (loader) loader.classList.add('hidden');
 }
-const API_URL = "http://localhost:3000/users";
+const API_URL = "https://coderspacee.onrender.com/users";
 const userData = JSON.parse(localStorage.getItem("user"));
 let USER_ID = userData.user_id;
 // Si existe profileToShow en localStorage, usar ese id
@@ -146,9 +146,9 @@ loadUserProfile();
 
 
 const postsContainer = document.getElementById("postsContainer");
-const API_POSTS_URL = "http://localhost:3000/post"; 
-const API_LIKES_URL = "http://localhost:3000/likes";
-const API_COMMENTS_URL = "http://localhost:3000/commentary";
+const API_POSTS_URL = "https://coderspacee.onrender.com/post"; 
+const API_LIKES_URL = "https://coderspacee.onrender.com/likes";
+const API_COMMENTS_URL = "https://coderspacee.onrender.com/commentary";
 
 
 

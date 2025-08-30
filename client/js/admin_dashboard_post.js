@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-const POST_URL = "http://localhost:3000/post/count";
+const POST_URL = "https://coderspacee.onrender.com/post/count";
 const Dashboard = document.getElementById("Dashboard");
 
 async function adminDashboardPost() {

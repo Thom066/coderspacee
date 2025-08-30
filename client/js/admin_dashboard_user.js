@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-const USER_URL = "http://localhost:3000/users/count";
+const USER_URL = "https://coderspacee.onrender.com/users/count";
 const Dashboard = document.getElementById("Dashboard");
 
 async function adminDashboardUser() {

@@ -33,8 +33,8 @@ darkToggle.addEventListener("click", () => {
 darkToggle.textContent = root.classList.contains("dark") ? "☀" : "🌙";
 
 const tbody = document.getElementById("tbody");
-const ADMIN_URL = "http://localhost:3000/post/user";
-const POST_URL = "http://localhost:3000/post";
+const ADMIN_URL = "https://coderspacee.onrender.com/post/user";
+const POST_URL = "https://coderspacee.onrender.com/post";
 
 let posts = []; 
 
