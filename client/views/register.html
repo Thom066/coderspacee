@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Register — CoderSpace</title>
+  <link rel="shortcut icon" href="../assets/img/coderlogo.png" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = { darkMode: 'class' }
@@ -27,12 +28,12 @@
   </header>
 
   <!-- MAIN -->
-  <main class="flex items-center justify-center min-h-[calc(100vh-120px)] px-4">
-    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl shadow p-8 max-w-md w-full">
-      <h2 class="text-2xl font-bold mb-6 text-center">Crear cuenta</h2>
-      <form action="#" method="POST" class="space-y-5" id="registerForm">
+  <main class="flex items-center justify-center min-h-[calc(100vh-120px)] px-2 sm:px-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl shadow p-4 sm:p-8 max-w-md w-full mx-2">
+      <h2 class="text-2xl font-bold mb-6 text-center">Create New Account</h2>
+      <form action="#" method="POST" class="space-y-4 sm:space-y-5" id="registerForm">
         <div>
-          <label for="name" class="block text-sm font-medium mb-1">Nombre</label>
+          <label for="name" class="block text-sm font-medium mb-1">Name</label>
           <input id="name" name="name" type="text" required 
             class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2 focus:ring-2 focus:ring-violet-500 focus:outline-none" />
         </div>
@@ -42,25 +43,24 @@
             class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2 focus:ring-2 focus:ring-violet-500 focus:outline-none" />
         </div>
         <div>
-          <label for="password" class="block text-sm font-medium mb-1">Contraseña</label>
+          <label for="password" class="block text-sm font-medium mb-1">Password</label>
           <input id="password" name="password" type="password" required 
             class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2 focus:ring-2 focus:ring-violet-500 focus:outline-none" />
         </div>
         <div>
-          <label for="password-confirm" class="block text-sm font-medium mb-1">Confirmar contraseña</label>
+          <label for="password-confirm" class="block text-sm font-medium mb-1">Confirm password</label>
           <input id="passwordConfirm" name="password_confirm" type="password" required 
             class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2 focus:ring-2 focus:ring-violet-500 focus:outline-none" />
         </div>
         <button type="submit" 
           class="w-full bg-violet-600 text-white font-semibold rounded-xl py-2 hover:bg-violet-700 transition">
-          Registrarme
+          Sign Up
         </button>
-      <div id="status" style="text-align: center; padding-top: 1rem;">
-      </div>
+      <div id="status" class="text-center pt-4"></div>
       </form>
       <p class="mt-4 text-sm text-center text-slate-600 dark:text-slate-400">
-        ¿Ya tienes cuenta?
-        <a href="login.html" class="text-violet-600 hover:underline">Inicia sesión</a>
+        Already have an account?
+        <a href="login.html" class="text-violet-600 hover:underline">Sign In</a>
       </p>
     </div>
   </main>

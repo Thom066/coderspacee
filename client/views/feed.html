@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CoderSpace — Feed</title>
   <link rel="stylesheet" href="../assets/css/feed.css">
+  <link rel="shortcut icon" href="../assets/img/coderlogo.png" type="image/x-icon">
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -28,9 +29,9 @@
   <!-- NAVIGATION HEADER -->
   <header
     class="sticky top-0 z-50 border-b border-gray-200/70 dark:border-gray-800/70 bg-white/80 dark:bg-gray-900/80 backdrop-blur">
-    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <nav class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8 h-16 flex items-center justify-between">
       <!-- Logo & Navigation -->
-      <div class="flex items-center gap-8">
+      <div class="flex items-center gap-4 sm:gap-8">
         <a href="../index.html"
           class="text-2xl font-bold tracking-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
           CoderSpace
@@ -42,10 +43,10 @@
       </div>
 
       <!-- Search & Profile -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2 sm:gap-3">
         <!-- Search Bar -->
         <a href="./profile.html">
-          <div style="padding-top: 0.2rem; margin: 0; padding-left: 10rem;" id="userPfp">
+          <div style="padding-top: 0.2rem; margin: 0; padding-left: 0.5rem;" id="userPfp">
             <img src="../assets/img/default.jpeg" alt="img"
               class="h-9 w-9 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 hover:scale-105 transition-transform bg-cover bg-center">
           </div>
@@ -74,9 +75,8 @@
       </div>
     </nav>
   </header>
-  <!--Try-->
   <!-- MAIN LAYOUT -->
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+  <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8 py-4 sm:py-6 grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6">
 
     <!-- LEFT SIDEBAR -->
     <aside class="hidden md:block md:col-span-1">
@@ -84,7 +84,7 @@
         <ul class="flex md:flex-col gap-3">
           <li>
             <a href="#top" title="News Feed"
-              class="nav-item group flex items-center justify-center w-14 h-14 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-indigo-400 dark:hover:border-indigo-400 hover:shadow-lg transition-all">
+              class="nav-item group flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-indigo-400 dark:hover:border-indigo-400 hover:shadow-lg transition-all">
               <svg
                 class="h-6 w-6 text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -93,10 +93,9 @@
               </svg>
             </a>
           </li>
-          
           <li>
             <a href="./profile.html" title="My Profile"
-              class="nav-item group flex items-center justify-center w-14 h-14 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-indigo-400 dark:hover:border-indigo-400 hover:shadow-lg transition-all">
+              class="nav-item group flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-indigo-400 dark:hover:border-indigo-400 hover:shadow-lg transition-all">
               <svg
                 class="h-6 w-6 text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -110,11 +109,11 @@
     </aside>
 
     <!-- MAIN CONTENT -->
-    <main class="md:col-span-7 space-y-6">
+    <main class="md:col-span-7 space-y-4 sm:space-y-6">
       <!-- New Post Button -->
       <section class="flex justify-center">
         <button id="newPostBtn"
-          class="group flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-500 hover:to-purple-500 transition-all hover:shadow-xl hover:scale-105 transform font-semibold">
+          class="group flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-500 hover:to-purple-500 transition-all hover:shadow-xl hover:scale-105 transform font-semibold text-base sm:text-lg">
           <svg class="h-6 w-6 group-hover:rotate-90 transition-transform" viewBox="0 0 24 24" fill="none"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -127,7 +126,7 @@
       </div>
 
     </main>
-    <dialog id="commentModal" class="hidden w-full max-w-2xl h-5/6 p-8 rounded-2xl shadow-2xl backdrop:bg-black backdrop:opacity-70 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex flex-col">
+    <dialog id="commentModal" class="hidden w-full max-w-2xl h-5/6 p-4 sm:p-8 rounded-2xl shadow-2xl backdrop:bg-black backdrop:opacity-70 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex flex-col">
 
       <div class="flex justify-between items-center mb-6 pb-4">
         <h3 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100">Comments</h3>
@@ -156,11 +155,11 @@
     </dialog>
 
       <!-- RIGHT SIDEBAR -->
-    <aside class="hidden md:block md:col-span-4 space-y-6">
+    <aside class="hidden md:block md:col-span-4 space-y-4 sm:space-y-6">
       <!-- Trending Projects -->
-      <section class="card rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-5">
-        <h3 class="font-semibold mb-4 text-lg">Trending Projects</h3>
-        <ul id="ul_trending" class="space-y-4">
+      <section class="card rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-3 sm:p-5">
+        <h3 class="font-semibold mb-2 sm:mb-4 text-base sm:text-lg">Trending Projects</h3>
+        <ul id="ul_trending" class="space-y-2 sm:space-y-4">
           <!-- Aquí JS pintará dinámicamente los 3 posts con más likes -->
         </ul>
       </section>
