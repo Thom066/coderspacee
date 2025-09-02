@@ -302,8 +302,26 @@ let firstLoad = true; // para controlar el loader inicial
 // función para traer todos los posts (una sola vez)
 async function fetchAllPosts() {
   if (allPosts.length > 0) return; // ya los trajimos
-  const res = await fetch("https://coderspacee.onrender.com/post/postdata");
-  allPosts = await res.json();
+  try {
+    const res = await fetch("https://coderspacee.onrender.com/post/postdata");
+    if (!res.ok) throw new Error("No se pudo obtener los posts");
+    allPosts = await res.json();
+    if (!Array.isArray(allPosts) || allPosts.length === 0) {
+      const container = document.getElementById("renderPosts");
+      if (container) {
+        container.innerHTML = '<p class="text-center text-gray-500 dark:text-gray-400 mt-10">No hay publicaciones para mostrar.</p>';
+        hideLoader();
+      }
+    }
+  } catch (err) {
+    const container = document.getElementById("renderPosts");
+    if (container) {
+      container.innerHTML = `<p class='text-center text-red-500 dark:text-red-400 mt-10'>❌ Error al cargar el feed.</p>`;
+      hideLoader();
+    }
+    console.error("Error al obtener posts:", err);
+    allPosts = [];
+  }
 }
 
 
